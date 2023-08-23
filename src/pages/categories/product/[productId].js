@@ -9,7 +9,11 @@ import React from 'react';
 const SingleProduct = ({ product }) => {
     return (
         <div>
-            <ProductDetails product={product}></ProductDetails>
+{/* 
+            {products.map(product => (
+                <ProductItem key={product.id} product={product} />
+            ))} */}
+            <ProductDetails key={product.id} product={product}></ProductDetails>
         </div>
     );
 };
@@ -31,7 +35,7 @@ SingleProduct.getLayout = function getLayout(page) {
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch('http://localhost:5000/products')
+    const res = await fetch('https://pc-bulder-server.vercel.app/products')
     const products = await res.json()
     const paths = products?.data.map(product => ({
         params: { productId: product._id }
@@ -42,9 +46,9 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const { params } = context
-    const res = await fetch(`http://localhost:5000/products/${params.productId}`)
+    const res = await fetch(`https://pc-bulder-server.vercel.app/products/${params.productId}`)
     const data = await res.json()
-    console.log(data)
+    //console.log(data)
 
     return {
         props: { product: data.data }
