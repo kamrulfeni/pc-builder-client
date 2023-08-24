@@ -1,3 +1,11 @@
+
+frontend live: frontend:https://pc-builder-client.netlify.app/
+backed live:https://pc-bulder-server.vercel.app/products
+GitHub backend:https://github.com/kamrulfeni/pc-builder-server.git
+github client:https://github.com/kamrulfeni/pc-builder-client.git
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
