@@ -9,7 +9,7 @@ export const authOptions = {
         }),
     ],
 
-    pages: { signIn: "http://localhost:3000/login"}
+    pages: { signIn: "https://pc-builder-client.netlify.app/login"}
 }
 
 export default NextAuth(authOptions)
